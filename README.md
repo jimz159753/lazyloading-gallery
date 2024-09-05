@@ -1,40 +1,107 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Task #2: Image Optimization and Lazy Loading
 
-## Getting Started
+## Overview
 
-First, run the development server:
+Develop a simple photo gallery application using Next.js with TypeScript. The application should implement image optimization and lazy loading techniques to ensure efficient loading and display of images.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Requirements
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Application Development**
+   - **Framework**: Next.js (with TypeScript).
+   - **Feature**: Implement image optimization and lazy loading for a photo gallery.
+   - **Data Model**: Define a TypeScript model representing photos, including metadata such as URLs and captions.
+   - **API Routes**: Create API routes to fetch photo data from a datasource or a mock service.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+2. **Implementation Details**
+   - **Image Optimization**:
+     - Utilize Next.js’s built-in `Image` component to handle image optimization.
+     - Ensure images are responsive and optimized for various screen sizes.
+   - **Lazy Loading**:
+     - Implement lazy loading for images to improve initial load times and user experience.
+   - **Data Model**:
+     - Define TypeScript types and interfaces to represent photo objects, including properties such as URL and caption.
+   - **API Routes**:
+     - Implement API routes using Next.js API routes to serve photo data. You can use a mock datasource if a real one is not available.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+3. **Improvement Commentary**
+   - **Code Efficiency**:
+     - Discuss potential improvements for handling larger datasets and optimizing image delivery.
+   - **User Experience**:
+     - Suggest enhancements for better performance, such as using a Content Delivery Network (CDN) or additional lazy loading techniques.
+   - **Error Handling**:
+     - Consider improvements for handling errors gracefully, such as fallback images or loading states.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+4. **Testing**
+   - **Unit Tests**:
+     - Write tests to verify that individual components, such as the image gallery and API routes, function correctly.
+   - **Integration Tests**:
+     - Test the interaction between the image components, API routes, and data sources.
+   - **Concurrent Usage**:
+     - Include tests to verify that the application performs well under concurrent usage, ensuring stability and responsiveness.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Implementation Steps
 
-## Learn More
+1. **Setup Next.js with TypeScript**
+   - Initialize a new Next.js project with TypeScript support.
+   - Install necessary dependencies.
 
-To learn more about Next.js, take a look at the following resources:
+2. **Define Data Model**
+   - Create TypeScript interfaces or types to represent photo objects.
+   - Example: `types/Photo.ts`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Develop the Photo Gallery**
+   - Implement a photo gallery component using the `Image` component from Next.js for optimization.
+   - Include lazy loading for
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Installation
 
-## Deploy on Vercel
+To get your development environment ready, you need to install the application's dependencies. 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Steps:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Open your terminal or command prompt.
+2. Navigate to the root directory of the project where the `package.json` file is located.
+3. Run the following command to install all necessary dependencies:
+
+    ```bash
+    npm install
+    ```
+
+   This command will download and install all the libraries and packages listed in the `package.json` file.
+
+## Running the App
+
+Once you have installed the dependencies, you can start the application in development mode.
+
+**Steps:**
+
+1. Make sure you are still in the root directory of the project.
+2. Run the following command to start the development server:
+
+    ```bash
+    npm run dev
+    ```
+
+   This command will launch the application, typically accessible at `http://localhost:3000` (or another port if configured differently). You can open this URL in your web browser to view and interact with the app.
+
+## Testing the App
+
+To ensure the application is functioning correctly and that all features work as expected, you can run the test suite.
+
+**Steps:**
+
+1. With the dependencies installed and the development server stopped, run the following command to execute the tests:
+
+    ```bash
+    npm run test
+    ```
+
+   This command will run all the test cases defined in the project. Tests help verify that the app behaves correctly and that no new changes have broken existing functionality.
+
+## Summary
+
+- **To install the app**, use `npm install`.
+- **To run the app**, use `npm run dev`.
+- **To test the app**, use `npm run test`.
+
+Following these steps will help you set up, run, and test the application effectively. If you encounter any issues, consult the project's documentation or reach out for support.
